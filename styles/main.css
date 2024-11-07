@@ -1,0 +1,555 @@
+:root {
+  --primary-color: #f5e6d3;
+  --secondary-color: #363636;
+  --text-color: #333;
+  --background-color: #fff;
+  --search: #ffcf91;
+  --content-background: #f4f3f3;
+}
+.dark-mode {
+  --primary-color: #3c3c3c;
+    --secondary-color: #f5e6d3;
+    --text-color: #f5f5f5;
+    --background-color: #222;
+    --search: black;
+  --content-background: #2c2b2b;
+}
+body, html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+
+}
+header {
+  background-color: var(--primary-color);
+  padding: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.search{
+  flex: 2;
+  display: block;
+}
+.home-link{
+  flex: 2;
+  padding-left: 15px;
+}
+.cartaccountburgur{
+  display: flex;
+  flex: 0.5;
+  align-items: center;
+  gap: 20px;
+  margin-left: 250px;
+  margin-right: 80px;
+}
+.home-link a .logo{
+  width: 75px;
+}
+.cart-section {
+  display: flex;
+  position: relative;
+}
+.cart-section .cart-number{
+color: var(--text-color);
+position: absolute;
+top: -10px;
+right: 0;
+}
+.cart-section .image{
+width: 30px;
+}
+.account-section{
+  display: flex;
+}
+.account-section img{
+  width: 25px;
+}
+.account-section .border{
+  border: 0.5px solid;
+  display: flex;
+  border-radius: 10px;
+  padding: 1px;
+  height: 25px;
+  align-items: center;
+}
+.account-section .arrrow{
+  width: 20px;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.items-container{
+  height: 100%;
+  display: grid;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+
+/* From Uiverse.io by Bodyhc */
+.search {
+  display: block;
+  position: relative;
+  width: 400px;
+}
+.bar:focus{
+outline: none;
+}
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.search button[type="submit"] {
+  background-color: var(--search);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 10px 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+@media (max-width : 300px){
+.items-container{
+ grid-template-columns: 1fr;
+}
+
+}
+ @media(min-width: 300px) and (max-width : 500px){
+.items-container{
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+}
+.cartaccountburgur{
+  margin-right: 50px;
+}
+}
+@media (min-width: 500px) and (max-width: 750px){
+  .items-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+@media (min-width: 750px) and (max-width: 800px){
+  .items-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 800px) and (max-width: 1100px){
+  .items-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+   
+}
+@media (min-width : 1100px){
+.items-container{
+  grid-template-columns: repeat(5, 1fr);
+}
+} 
+@media (min-width : 1300px){
+.items-container{
+  grid-template-columns: repeat(6, 1fr);
+}
+
+
+} 
+@media (min-width : 2000px){
+.items-container{
+  grid-template-columns: repeat(7, 1fr);
+}
+
+
+} 
+
+
+.content{
+  background: var(--background-color);
+  background-color: var(--content-background);
+  border: none;
+  /* border: 0.2px solid var(--secondary-color); */
+  border-radius: 5px;
+  height: 300px;
+  margin: 5px;
+  padding: 1rem;
+  display: grid;
+  transition: transform 0.3s ease;
+  text-overflow: ellipsis;
+}
+.price{
+  text-align: left;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+.image-slider-section{
+left: 20%;
+right: 20%;
+position: absolute;
+border: solid;
+height: 200px;
+}
+  .product-image{
+    width: 100%;
+    height: 170px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .product-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 200ms ease-in-out;
+  }
+  .product-image img:hover{
+    width: 103%;
+    
+  }
+  .product-name{
+    width: 100%;
+  text-overflow: ellipsis;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  }
+  .add-to-cart-button{
+    width: 100%;
+    height: 30px;
+    /* background: lightseagreen; */
+  }
+  .amount{
+    width: 100%;
+    height: 30px;
+    /* background: lightslategray; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+  }
+ 
+  .add-to-cart{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background: var(--primary-color);
+    color: var(--text-color);
+    transition: all 200ms;
+  }
+  .add-to-cart:active{
+    width: calc(95%);
+    margin-left: 5px;
+  }
+  .add-to-cart:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  } 
+    footer {
+      background-color: var(--primary-color);
+      text-align: center;
+      padding: 1rem;
+      bottom: 0;
+}
+
+  /* From Uiverse.io by Subu19 */
+  .hamburger {
+    height: 50px;
+    width: 25px;
+    transform: 0.2s;
+    position: relative;
+  }
+
+  .hamburger .checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .line {
+    transition: 0.5s;
+    stroke-width: 3px;
+    stroke: rgb(130, 130, 130);
+  }
+
+  .lineTop {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 25;
+  }
+
+  .lineBottom {
+    stroke-dasharray: 40 40;
+    stroke-dashoffset: 60;
+  }
+
+  .lineMid {
+    stroke-dasharray: 40 40;
+  }
+
+  .hamburger .checkbox:checked+svg .line {
+    stroke: #8b8ba7;
+  }
+
+  .hamburger .checkbox:checked+svg .lineTop {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(45deg) translate(-7px, -5px);
+  }
+
+  .hamburger .checkbox:checked+svg .lineMid {
+    stroke-dashoffset: 40;
+  }
+
+  .hamburger .checkbox:checked+svg .lineBottom {
+    stroke-dashoffset: 0;
+    transform-origin: left;
+    transform: rotateZ(-45deg) translate(-5px, 5px);
+  }
+
+.hero-section {
+position: relative;
+width: 80%;
+top: 110px;
+margin-left: 10%;
+margin-bottom: 150px;
+height: 300px;
+overflow: hidden;
+}
+
+.slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+opacity: 1;
+}
+
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 2rem;
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 10px;
+cursor: pointer;
+z-index: 10;
+}
+
+.arrow-left {
+left: 10px;
+}
+
+.arrow-right {
+right: 10px;
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+.small-search{
+  display: none;
+  justify-content: center;
+  align-items: center;
+width: 100%;
+margin-top: 15px;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 80%;
+  --height-of-input: 35px;
+  --border-height: 2px;
+  --border-color: #f5e6d3 ;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: fixed;
+  top: 80px;
+  z-index: 100;
+
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background-color: var(--background-color);
+  border:  1px rgb(137, 137, 137) solid;
+}
+
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 40%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  color: var(--text-color);
+  border: none;
+}
+
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  background: var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+  @media (max-width: 1000px) {
+    .search {
+      display: none;
+    }
+    .small-search {
+      display: flex;
+    }
+    .cartaccountburgur{
+      margin-right: 50px;
+      margin-left: 0;
+      gap: 20px;
+      justify-content: space-between;
+      flex: 0.5;
+    }
+
+  }
+  @media (max-width: 767px){
+    .hero-section{
+      width: 90%;
+      margin-left: 5%;
+      height: 200px;
+    }.category-section p {
+      font-size: 10px;
+    }
+  }
+
+@media (min-width : 500px){
+  .category-section{
+    justify-content: space-around;
+  }
+}
+.category-section{
+  display: flex;
+  /* justify-content: space-around; */
+  padding: 0;
+  overflow: scroll;
+  gap: 30px;
+}
+
+.category-div {
+  border-bottom: 3px solid transparent;
+  /* No visible border by default */
+  cursor: pointer;
+  transition: border-bottom 1s ease;
+  /* Animation for the border */
+}
+
+.category-div.buttom {
+  border-bottom: 3px solid var(--secondary-color);
+  /* Solid border for selected category */
+}
+.category-section img{
+width: 20px;
+margin: 0;
+cursor: pointer;
+  }
+  .category-section p{
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .orders-link img{
+    width: 25px;
+  }
+  .orders-link{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }

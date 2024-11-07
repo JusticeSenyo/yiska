@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Orders</title>
+
+  <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load a font called Roboto from Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Here are the CSS files for this page. -->
+  <link rel="stylesheet" href="styles/orders.css">
+  <link rel="stylesheet" href="styles/animation.css">
+  <script type="module" src="firebaseauth.js"></script>
+  <script type="module" src="homepage.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="home-link">
+      <a href="yiska.html">
+        <img src="images/png/logo-no-background.png" alt="logo">
+      </a>
+    </div>
+    <div class="second">
+      <!-- <div class="returns-orders">
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+      </div> -->
+          <div class="cart-section">
+            <a href="cart.html" class="js-cart-number cart-number"></a>
+            <a href="cart.html"><img src="images//cart-shopping-svgrepo-com(2).svg" alt="cart-icon" class="image"
+                title="cart"></a>
+          </div>
+  
+      <div class="something">
+  
+      </div>
+      <div class="account-section">
+        <div class="border">
+          <a href="account.html"><img src="images/account-svgrepo-com(1).svg" alt="account" class="account"
+              title="account"></a>
+          <a href="account.html">
+            <p class="account-name">
+              <img class="arrrow" src="images//arrow-down-svgrepo-com copy.svg" alt="">
+            </p>
+          </a>
+        </div>
+      </div>
+  
+      <!-- <div class="hamburger">
+    <input class="checkbox" type="checkbox" id="menu-toggle" />
+    <svg fill="none" viewBox="0 0 50 50" height="40" width="40">
+      <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 11L44 11"></path>
+      <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43" class="lineMid line"></path>
+      <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 37H43" class="lineBottom line"></path>
+    </svg>
+  </div> -->
+    </div>
+  
+  
+  </header>
+
+  <div class="main">
+    <div class="page-title">Your Orders</div>
+
+    <!-- <div class="orders-grid">
+      <div class="order-container">
+
+        <div class="order-header">
+          <div class="order-header-left-section">
+            <div class="order-date">
+              <div class="order-header-label">Order Placed:</div>
+              <div>August 12</div>
+            </div>
+            <div class="order-total">
+              <div class="order-header-label">Total:</div>
+              <div>$35.06</div>
+            </div>
+          </div>
+
+          <div class="order-header-right-section">
+            <div class="order-header-label">Order ID:</div>
+            <div>27cba69d-4c3d-4098-b42d-ac7fa62b7664</div>
+          </div>
+        </div>
+
+        <div class="order-details-grid">
+          <div class="product-image-container">
+            <img src="images/Flocons D'avoine White Oats.jpg">
+          </div>
+
+          <div class="product-details">
+            <div class="product-name">
+              Black and Gray Athletic Cotton Socks - 6 Pairs
+            </div>
+            <div class="product-delivery-date">
+              Arriving on: August 15
+            </div>
+            <div class="product-quantity">
+              Quantity: 1
+            </div>
+            <button class="buy-again-button button-primary">
+              <img class="buy-again-icon" src="images/buy-again.png">
+              <span class="buy-again-message">Buy it again</span>
+            </button>
+          </div>
+
+          <div class="product-actions">
+            <a href="tracking.html">
+              <button class="track-package-button button-secondary">
+                Track package
+              </button>
+            </a>
+          </div>
+
+          <div class="product-image-container">
+            <img src="images/Good Moring White Oats.jpg">
+          </div>
+
+          <div class="product-details">
+            <div class="product-name">
+              Adults Plain Cotton T-Shirt - 2 Pack
+            </div>
+            <div class="product-delivery-date">
+              Arriving on: August 19
+            </div>
+            <div class="product-quantity">
+              Quantity: 2
+            </div>
+            <button class="buy-again-button button-primary">
+              <img class="buy-again-icon" src="images/buy-again.png">
+              <span class="buy-again-message">Buy it again</span>
+            </button>
+          </div>
+
+          <div class="product-actions">
+            <a href="tracking.html">
+              <button class="track-package-button button-secondary">
+                Track package
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-container">
+
+        <div class="order-header">
+          <div class="order-header-left-section">
+            <div class="order-date">
+              <div class="order-header-label">Order Placed:</div>
+              <div>June 10</div>
+            </div>
+            <div class="order-total">
+              <div class="order-header-label">Total:</div>
+              <div>$41.90</div>
+            </div>
+          </div>
+
+          <div class="order-header-right-section">
+            <div class="order-header-label">Order ID:</div>
+            <div>b6b6c212-d30e-4d4a-805d-90b52ce6b37d</div>
+          </div>
+        </div>
+
+        <div class="order-details-grid">
+          <div class="product-image-container">
+            <img src="images/Corn flakes.jpg">
+          </div>
+
+          <div class="product-details">
+            <div class="product-name">
+              Intermediate Size Basketball
+            </div>
+            <div class="product-delivery-date">
+              Arriving on: June 17
+            </div>
+            <div class="product-quantity">
+              Quantity: 2
+            </div>
+            <button class="buy-again-button button-primary">
+              <img class="buy-again-icon" src="images/buy-again.png">
+              <span class="buy-again-message">Buy it again</span>
+            </button>
+          </div>
+
+          <div class="product-actions">
+            <a href="tracking.html">
+              <button class="track-package-button button-secondary">
+                Track package
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+        <div class="orders-grid js-orders-grid">
+        </div>
+  </div>
+  <script type="module" src="scripts/orders.js"></script>
+<script src="styles/styles.js"></script>
+<script type="text/javascript">
+  (function (d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function () {
+      window.voiceflow.chat.load({
+        verify: { projectID: '66bc06c1a7c181ee33c59b99' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production'
+      });
+    }
+    v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</body>
+</html>

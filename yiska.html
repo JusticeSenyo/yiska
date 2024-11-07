@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yiska.com</title>
+  <link rel="shortcut icon" href="./images/favicon/yiska-favicon-color.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/animation.css">
+  <link rel="stylesheet" href="styles/fadein.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <script type="module" src="firebaseauth.js"></script>
+  <script type="module" src="homepage.js"></script>
+</head>
+
+<body>
+  <header>
+
+    <div class="home-link">
+      <a href="yiska.html">
+      <img class="logo"src="images/png/logo-no-background.png" alt="logo">
+    </a>
+  </div>
+
+<div class="search">
+  <input placeholder="explore yiska...." type="text" class="bar js-search-input-big">
+  <button type="submit">Search</button>
+</div>
+
+<div class="cartaccountburgur">
+    <div class="cart-section">
+        <a href="cart.html" class="js-cart-number cart-number"></a>
+        <a href="cart.html"><img src="images//cart-shopping-svgrepo-com(2).svg" alt="cart-icon" class="image" title="cart"></a>
+      </div>
+      
+
+    
+      <div class="account-section">
+        <div class="border">
+        <a href="account.html"><img src="images/account-svgrepo-com(1).svg" alt="account" class="account" title="account"></a>
+        <a href="account.html"><p class="account-name">
+          <img class="arrrow" src="images//arrow-down-svgrepo-com copy.svg" alt="">
+        </p></a>
+        </div>
+      </div>
+    
+<div class="hamburger">
+  <input class="checkbox" type="checkbox" id="menu-toggle" />
+  <svg fill="none" viewBox="0 0 50 50" height="40" width="40">
+    <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 11L44 11"></path>
+    <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43" class="lineMid line"></path>
+    <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 37H43" class="lineBottom line"></path>
+  </svg>
+</div>
+
+</div>
+
+  </header>
+    <div id="sidebar">
+      <div class="header">
+      <img class="header-image"src="images/png/logo-no-background.png" alt="logo">
+        
+      </div>
+
+      <div class="theme-switch">
+            <p class="">Switch Theme</p>
+      <label class="switch" for="switch">
+              <input id="switch" type="checkbox" class="circle" />
+              <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" class="moon svg">
+                !Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+                - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.
+                <path
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <div class="sun svg">
+                <span class="dot"></span>
+              </div>
+            </label>
+          </div>
+
+
+<div class="sidebar-item">
+<!--       
+        <a class="orders-link header-link" href="orders.html">
+          <img src="images/returnsmajor-svgrepo-com.svg" alt="">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+          </a> -->
+      
+
+</div>
+<!-- <div class="sidebar-item">
+  <h3>categories</h3>
+  <ul class="sidebar-list">
+    <li><a href="#product1">Product A</a></li>
+    <li><a href="#product2">Product B</a></li>
+    <li><a href="#product3">Product C</a></li>
+  </ul>
+</div> -->
+<div class="sidebar-item">
+  <h3>All categories</h3>
+  <ul class="sidebar-list">
+    <li>
+  <div class="health-gygiene category-div" data-category="health and hygiene">
+    <img src="images/medical-medicine-health-23-svgrepo-com.svg" alt="">
+    <p>health & hygiene</p>
+  </div>
+  </li>
+  <li>
+  <div class="household-Essentials category-div" data-category="household essentials">
+    <img src="images/family-home-household-family-single-family-home-svgrepo-com.svg" alt="">
+    <p>household Essentials</p>
+  </div>
+  </li>
+  <li>
+  <div class="Food-beverages category-div" data-category="food and beverages">
+    <img src="images/food-and-drink-food-edible-healthy-svgrepo-com.svg" alt="">
+    <p>Food & beverages</p>
+  </div>
+  </li>
+  <li>
+  <div class="alchohol category-div" data-category="alcoholics">
+    <img src="images/alcohol-shop-svgrepo-com.svg" alt="">
+    <p>alchoholics</p>
+  </div>
+  </li>
+  <li>
+  <div class="snacks-sweets category-div" data-category="snacks and sweets">
+    <img src="images/nachos-snack-svgrepo-com.svg" alt="">
+    <p>snack & sweets</p>
+  </div>
+  </li>
+  <li>
+  <div class="cooking-essentials category-div" data-category="cooking essentials">
+    <img src="images/cooking-stew-svgrepo-com.svg" alt="">
+    <p>cooking essentials</p>
+  </div>
+  </li>
+  </ul>
+</div>
+<div class="sidebar-item">
+  <h3>Filters</h3>
+  <ul class="sidebar-list">
+  <li>
+    <label>
+      <input type="radio" name="price-range" value="0-50">
+      GH₵0 - GH₵50
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="radio" name="price-range" value="50-100">
+      GH₵50 - GH₵100
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="radio" name="price-range" value="100-200">
+      GH₵100 - GH₵200
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="radio" name="price-range" value="200-1000">
+      GH₵200 and Above
+    </label>
+  </li>
+  <li>
+      <button class="filter-button">APPLY FILTER</button>
+
+  </li>
+  </ul>
+</div>
+<div class="sidebar-item">
+  <h3>About Us</h3>
+  <p>Learn about our company's mission and values.</p>
+</div>
+<div class="sidebar-item">
+  <h3>Contact</h3>
+  <p>Get in touch with our support team.</p>
+</div>
+<div class="sidebar-item">
+  <h3>FAQ</h3>
+  <ul class="sidebar-list">
+    <li><a href="#faq1">How to use our product?</a></li>
+    <li><a href="#faq2">Pricing information</a></li>
+    <li><a href="#faq3">Shipping details</a></li>
+  </ul>
+  </div>
+<div class="sidebar-item">
+  <h3>Settings</h3>
+  <ul class="sidebar-list">
+    <li><a href="#account">Account Settings</a></li>
+    <li><a href="#notifications">Notifications</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+  </ul>
+</div>
+
+      </div>
+              
+
+    
+
+  <div id="content" class="blur-content">
+
+
+    <div class="small-search">
+<form class="form">
+  <button>
+    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+      <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor"
+        stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <input class="input js-search-input-small" placeholder="explore yiska..." required="" type="text">
+  <button class="reset" type="reset">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+      stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</form>
+</div>
+          <div class="hero-section">
+            <div class="slide active">
+              <img src="images/wp8018071-8k-dark-wallpapers.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+              <img src="images/wp8018092-8k-dark-wallpapers - Copy.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+              <img src="images/wp8018057-8k-dark-wallpapers copy.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+              <img src="images/IMG-20240427-WA0033.jpg" alt="Slide 3">
+            </div>
+            <div class="arrow arrow-left">&lt;</div>
+            <div class="arrow arrow-right">&gt;</div>
+          </div>
+
+          <div class="category-section"> 
+
+  <div class="ALL category-div">
+  <img src="images/tasks-all-svgrepo-com.svg" alt="">
+  <p class="ALL" style="cursor: pointer;">all categories</p>
+  </div>
+  
+  
+  <div class="health-gygiene category-div" data-category="health and hygiene">
+  <img src="images/medical-medicine-health-23-svgrepo-com.svg" alt="" >
+  <p >health & hygiene</p>
+  </div>
+  <div class="household-Essentials category-div" data-category="household essentials">
+  <img src="images/family-home-household-family-single-family-home-svgrepo-com.svg" alt="">
+  <p>household Essentials</p>
+  </div>
+  <div class="Food-beverages category-div"data-category="food and beverages" >
+  <img src="images/food-and-drink-food-edible-healthy-svgrepo-com.svg" alt="">
+  <p>Food & beverages</p>
+  </div>
+  <div class="alchohol category-div" data-category="alcoholics">
+  <img src="images/alcohol-shop-svgrepo-com.svg" alt="">
+  <p>alchohols</p>
+  </div>
+  <div class="snacks-sweets category-div" data-category="snacks and sweets">
+  <img src="images/nachos-snack-svgrepo-com.svg" alt="">
+  <p>snack & sweets</p>
+  </div>
+  <div class="cooking-essentials category-div" data-category="cooking essentials">
+  <img src="images/cooking-stew-svgrepo-com.svg" alt="">
+  <p>cooking essentials</p>
+  </div>
+</div>
+          
+  <div class="items-container js-products-container fade-in">
+    <!-- this is the items container -->
+  </div>
+</div>
+</div>
+    <footer>
+      <p>&copy; 2024 Yiska. All rights reserved.</p>
+    </footer>
+    </div>
+  
+
+<script type="module"src="scripts/yiska.js"></script>
+<script src="styles/styles.js"></script>
+  
+</script>
+<script type="text/javascript">
+  (function (d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function () {
+      window.voiceflow.chat.load({
+        verify: { projectID: '66bc06c1a7c181ee33c59b99' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production'
+      });
+    }
+    v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
